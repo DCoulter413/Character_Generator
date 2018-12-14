@@ -4,7 +4,7 @@ namespace Roguelike
     public class Character
     {
         public String Name;
-        public RandomList<Characteristic> _characteristics;
+        public RandomList<Trait> _Traits;
         public int Age;
 
         /// <summary>
@@ -12,7 +12,7 @@ namespace Roguelike
         /// </summary>
         public Character(String name)
         {
-            InitialiseCharacteristics();
+            InitialiseTraits();
             InitialiseCharacterBaseAttributes(name);
         }
 
@@ -21,7 +21,7 @@ namespace Roguelike
         /// </summary>
         public Character() {
             String name = NameGenerator();
-            InitialiseCharacteristics();
+            InitialiseTraits();
             InitialiseCharacterBaseAttributes(name);
         }
 
@@ -30,17 +30,17 @@ namespace Roguelike
         /// </summary>
         /// <returns>A name</returns>
         public String NameGenerator() { 
-            RandomList<String> prefixes =  new RandomList<String> { "lo", "te", "soa", "co"};
-            RandomList<String> suffixes = new RandomList<String> { "l", "as", "ud"};
+            RandomList<String> prefixes =  new RandomList<String> { "Car", "Har", "Lar", "Mar"};
+            RandomList<String> suffixes = new RandomList<String> { "cus", "ley", "son", "ton"};
             return prefixes.Roll() + suffixes.Roll();
         }
 
         /// <summary>
-        /// Initialises the characteristics.
+        /// Initialises the Traits.
         /// </summary>
-        public void InitialiseCharacteristics () {
-            CharacteristicGenerator characteristicGenerator = new CharacteristicGenerator();
-            _characteristics = characteristicGenerator.Generate();
+        public void InitialiseTraits () {
+            TraitGenerator TraitGenerator = new TraitGenerator();
+            _Traits = TraitGenerator.Generate();
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Roguelike
         public void InitialiseCharacterBaseAttributes(String name) {
             Name = name;
             Random r = new Random();
-            Age = r.Next(70) + 18;
+            Age = r.Next(62) + 18;
         }
 
         /// <summary>
@@ -61,14 +61,23 @@ namespace Roguelike
         {
             if (Age < 30)
             {
-                return "You woke up for the first time about " + Age + " years ago. You go by " + Name + ". By your ripe young age you have achieved so much. You have the following characteristics : " + _characteristics;
+                return "Your name is " + Name + ". You woke up for the first time only " + Age + " years ago.\n" +
+                    "You have a youthful spirit and vividly remember your most formative experiences.\n" +
+                    "You have the following Traits:\n" + 
+                    _Traits;
             }
             else if (Age < 60)
             {
-                return  "You woke up for the first time about " + Age + " years ago. You go by " + Name + ". By your middle young age you have achieved a lot. You have the following characteristics : " + _characteristics;
+                return "Your name is " + Name + ". You woke up for the first time about " + Age + " years ago.\n" +
+                    "You're not as young as you once were, but you're wise enough to know that's okay.\n" +
+                    "You have the following Traits:\n" +
+                    _Traits;
             }
             else {
-                return "Creakkkkkk... Hear that creak? That was your hip... makes sense given you're " + Age + " years old.. You go by " + Name + ". While you may not be able to learn much more, it doesn't matter as you've mastered :" +_characteristics;
+                return "Your name is " + Name + ". You woke up for the first time, what was it, " + Age + " years ago?\n" +
+                    "You've led a long life, but you still remember most of your skills.\n" +
+                    "You have the following Traits:\n" +
+                    _Traits;
             }
 
         }

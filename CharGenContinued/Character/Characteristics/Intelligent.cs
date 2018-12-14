@@ -1,14 +1,15 @@
 ﻿using System;
 namespace Roguelike
 {
-    public class Intelligent : Characteristic
+    public class Intelligent : Trait
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Roguelike.Intelligent"/> class.
         /// </summary>
         public Intelligent()
         {
-            SetDescription("One who has or shows intelligence, especially of a high level");
+            SetDescription("Has the brain power to understand and solve complex problems.");
+            SetTraitName("Intelligent");
         }
     }
 }

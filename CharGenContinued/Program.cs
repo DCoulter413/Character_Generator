@@ -24,7 +24,7 @@ namespace Roguelike
 
             while (true) {
                 writer.WriteLine("Would you like to name it yourself?\n [Y]es or [N]o");
-                input = reader.ReadLine().ToString();
+                input = reader.ReadLine().ToString().ToUpper();
 
                 if(input == "Y" || input == "N") {
                     break;
@@ -47,9 +47,8 @@ namespace Roguelike
             }
 
             input = "";
-
             writer.WriteLine(character);
-
+            Console.ReadLine();
         }
 
     }
