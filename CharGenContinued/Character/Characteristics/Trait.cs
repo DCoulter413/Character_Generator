@@ -22,6 +22,18 @@ namespace Roguelike
             TraitName = name;
         }
 
+        public void SetTraitExamines(string[] examines) {
+            TraitExamines.AddRange(examines);
+        }
+
+        public void SetTraitHints(string[] hints) {
+            TraitHints.AddRange(hints);
+        }
+
+        public void SetTraitAlibis(string[] alibis) {
+            TraitAlibis.AddRange(alibis);
+        }
+
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:Roguelike.Trait"/>.
         /// </summary>
