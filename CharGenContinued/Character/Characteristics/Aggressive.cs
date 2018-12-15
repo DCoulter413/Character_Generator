@@ -20,7 +20,7 @@ namespace Roguelike
                 "I heard the victim had a lot more wounds than necessary.",
                 "I assume whoever was yelling those angry, nasty things was the killer.",
                 "I think this may have been a hate crime and not just a random attack.",
-                "I suspect that angry person over there, but I don't want them to see me pointing."};
+                "I don't trust that angry-looking person there. I don't want them to see me pointing."};
             SetTraitHints(hints);
         }
     }

@@ -11,15 +11,15 @@ namespace Roguelike
             SetDescription("Master of sneaking around, blending in, and sleight of hand.");
             SetTraitName("Stealthy");
             string[] examines = {
-                "They stand as still as a piece of furniture.",
-                "They seem to be practicing coin tricks.",
-                "They look like they want to sneak out of here.",
-                "Their face is difficult to see."};
+                "They're standing so still, you might not even notice them.",
+                "They're practicing concealing coins in their palms and sleeves.",
+                "Looks like they're looking for a way to sneak out of here.",
+                "You can't seem to see their eyes."};
             SetTraitExamines(examines);
             string[] hints = {
                 "I heard that it didn't look like the victim landed a single hit back on the killer.",
-                "I didn't hear anything. I wouldn't have known there was a murder.",
-                "I was nearby during the murder, but I didn't really see anything helpful.",
+                "I didn't hear anything. I didn't even know there was a murder.",
+                "Frustrating that I was nearby during the murder and yet didn't really see anything helpful.",
                 "I heard the victim had wounds around their throat and back."};
             SetTraitHints(hints);
         }

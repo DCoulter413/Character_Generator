@@ -6,6 +6,7 @@ namespace Roguelike
         public String Name;
         public RandomList<Trait> _Traits;
         public int Age;
+        public int Sanity;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Roguelike.Character"/> class if name is given.
@@ -51,6 +52,7 @@ namespace Roguelike
             Name = name;
             Random r = new Random();
             Age = r.Next(62) + 18;
+            Sanity = 100;
         }
 
         /// <summary>

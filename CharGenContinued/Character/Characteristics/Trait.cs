@@ -5,9 +5,9 @@ namespace Roguelike
     {
         public String Description;
         public String TraitName;
-        RandomList<String> TraitExamines;
-        RandomList<String> TraitHints;
-        RandomList<String> TraitAlibis;
+        public RandomList<String> TraitExamines = new RandomList<string>();
+        public RandomList<String> TraitHints = new RandomList<string>();
+        public RandomList<String> TraitAlibis = new RandomList<string>();
 
         /// <summary>
         /// Sets the description.
@@ -28,10 +28,6 @@ namespace Roguelike
 
         public void SetTraitHints(string[] hints) {
             TraitHints.AddRange(hints);
-        }
-
-        public void SetTraitAlibis(string[] alibis) {
-            TraitAlibis.AddRange(alibis);
         }
 
         /// <summary>
