@@ -11,7 +11,7 @@ namespace Roguelike
             SetDescription("Master of sneaking around, blending in, and sleight of hand.");
             SetTraitName("Stealthy");
             string[] examines = {
-                "They're standing so still, you might not even notice them.",
+                "They sometimes stand so still, you could forget they were here.",
                 "They're practicing concealing coins in their palms and sleeves.",
                 "Looks like they're looking for a way to sneak out of here.",
                 "You can't seem to see their eyes."};

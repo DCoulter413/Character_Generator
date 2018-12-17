@@ -12,7 +12,7 @@ namespace Roguelike
             SetTraitName("Intelligent");
             string[] examines = {
                 "Their mind appears to be elsewhere at the moment.",
-                "They occasionally glance down at a small, old-looking book.",
+                "They occasionally look at a small, old-looking book.",
                 "They're faintly muttering something you don't understand.",
                 "They appear to be as deep in thought as you are."};
             SetTraitExamines(examines);

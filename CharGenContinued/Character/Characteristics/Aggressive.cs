@@ -13,14 +13,14 @@ namespace Roguelike
             string[] examines = {
                 "They seem quite easily irritated.",
                 "Their fists are clenched and their sleeves lightly torn.",
-                "They're scowling at you and the others.",
-                "They're muttering angrily about the other people here."};
+                "They're scowling back at you.",
+                "They seem angry at some of the others."};
             SetTraitExamines(examines);
             string[] hints = {
-                "I heard the victim had a lot more wounds than necessary.",
+                "I heard the victim had a lot more wounds than would've been necessary.",
                 "I assume whoever was yelling those angry, nasty things was the killer.",
                 "I think this may have been a hate crime and not just a random attack.",
-                "I don't trust that angry-looking person there. I don't want them to see me pointing."};
+                "I think that angry person there did it, but I could be next if they see me pointing."};
             SetTraitHints(hints);
         }
     }

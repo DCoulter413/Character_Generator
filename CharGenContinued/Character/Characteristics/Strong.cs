@@ -13,8 +13,8 @@ namespace Roguelike
             string[] examines = {
                 "You can tell they work out.",
                 "Their stance is a confident one.",
-                "They seem to be exercising a bit to pass the time.",
-                "They look like they could crush your skull..."};
+                "They occasionally flex as if they were lifting weights.",
+                "They look tough enough to be someone's bodyguard."};
             SetTraitExamines(examines);
             string[] hints = {
                 "I heard the victim had a lot of broken bones.",

@@ -11,10 +11,10 @@ namespace Roguelike
             SetDescription("Naturally likeable, with little difficulty building vast networks of friends.");
             SetTraitName("Amiable");
             string[] examines = {
-                "They're talking with a small crowd.",
-                "Upon seeing you, they smile weakly.",
-                "They seem to be comforting a friend.",
-                "Despite everything, they're quite charming."};
+                "They're surrounded by a small group of people.",
+                "When you look at them, they smile weakly.",
+                "One of their friends is leaning on their shoulder.",
+                "Despite everything, you have to admit they're quite charming."};
             SetTraitExamines(examines);
             string[] hints = {
                 "I heard there was evidence of more than two people at the scene.",

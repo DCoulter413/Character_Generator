@@ -20,8 +20,6 @@ namespace Roguelike
 
             String input = "";
 
-            Suspect Tester = new Suspect(); //this isn't supposed to be part of the program it's just for testing
-
             writer.WriteLine("Welcome to Roguelike Generator v1.0.0 \nLet's generate a character!");
 
             while (true) {
