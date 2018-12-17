@@ -5,8 +5,11 @@ namespace Roguelike
     {
         public String Name;
         public RandomList<Trait> _Traits;
+        public static Random Rnd = new Random();
         public int Age;
         public int Sanity;
+        RandomList<String> prefixes = new RandomList<String> { "Car", "Har", "Lar", "Mar", "Dan", "Max", "Fin", "La", "Hen", "Egg", "Oli", "Stri" };
+        RandomList<String> suffixes = new RandomList<String> { "cus", "ley", "son", "ton", "bury", "ver", "londe", "mas", "ine", "lette", "bert", "der" };
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Roguelike.Character"/> class if name is given.
@@ -31,8 +34,6 @@ namespace Roguelike
         /// </summary>
         /// <returns>A name</returns>
         public String NameGenerator() { 
-            RandomList<String> prefixes =  new RandomList<String> { "Car", "Har", "Lar", "Mar"};
-            RandomList<String> suffixes = new RandomList<String> { "cus", "ley", "son", "ton"};
             return prefixes.Roll() + suffixes.Roll();
         }
 
@@ -50,8 +51,7 @@ namespace Roguelike
         /// <param name="name">Name.</param>
         public void InitialiseCharacterBaseAttributes(String name) {
             Name = name;
-            Random r = new Random();
-            Age = r.Next(62) + 18;
+            Age = Rnd.Next(62) + 18;
             Sanity = 100;
         }
 

@@ -3,13 +3,13 @@ namespace Roguelike
 {
     class Suspect : Character
     {
-        public String[] Examine = {"test0", "test1"};
+        public String[] Examine = {"test0", "test1"}; //TODO: make this auto-size for how many traits there are
         public String Hint = "";
         public int ID = 0;
 
         //public String[] Personality = {"0test", "1test"};
         //I don't think this actually does anything yet so I commented it out until I find a purpose
-        static Random Rnd = new Random();
+        //static Random Rnd = new Random();
 
         public Suspect() {
             Name = NameGenerator();

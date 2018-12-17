@@ -49,6 +49,8 @@ namespace Roguelike
             input = "";
             writer.WriteLine(character);
             Console.ReadLine();
+            GameManager tester = new GameManager();
+            Console.ReadLine();
         }
 
     }

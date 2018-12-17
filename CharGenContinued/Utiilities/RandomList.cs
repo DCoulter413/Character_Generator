@@ -9,7 +9,7 @@ namespace Roguelike
     /// </summary>
     public class RandomList<T> : List<T>, ICloneable
     {
-        private Random _randomiser;
+        static Random _randomiser;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Roguelike.RandomList`1"/> class.
