@@ -31,13 +31,12 @@ namespace Roguelike
                 switch (SuspectObjectList[h].ID == KillerID)
                 {
                     case true:
-                        SuspectObjectList[h].Hint = "Placeholder. I'm the killer!";
+                        SuspectObjectList[h].Hint = SuspectObjectList[KillerID]._Traits[WhoDunIt.Next(2)].TraitHints.Roll();
                         SuspectObjectList[h].Sanity -= WhoDunIt.Next(50);
                         break;
                     default:
-                        SuspectObjectList[h].Hint = "Placeholder. The killer is " + SuspectObjectList[KillerID].Name + ".";
+                        SuspectObjectList[h].Hint = SuspectObjectList[KillerID]._Traits[WhoDunIt.Next(2)].TraitHints.Roll();
                         SuspectObjectList[h].Sanity -= WhoDunIt.Next(50);
-
                         break;
                 }
             }
@@ -45,7 +44,7 @@ namespace Roguelike
             for (int p = 0; p < 10; p++)
             {
                 Console.WriteLine("#" + SuspectObjectList[p].ID + ": " + SuspectObjectList[p].Name);
-                Console.WriteLine(SuspectObjectList[p].Hint);
+                Console.WriteLine("\"" + SuspectObjectList[p].Hint + "\"");
                 Console.WriteLine(SuspectObjectList[p].Examine[0]);
                 Console.WriteLine(SuspectObjectList[p].Examine[1]);
                 Console.WriteLine("They're " + SuspectObjectList[p].Age + " years old.");

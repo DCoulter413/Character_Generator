@@ -8,8 +8,8 @@ namespace Roguelike
         public static Random Rnd = new Random();
         public int Age;
         public int Sanity;
-        RandomList<String> prefixes = new RandomList<String> { "Car", "Har", "Lar", "Mar", "Dan", "Max", "Fin", "La", "Hen", "Egg", "Oli", "Stri" };
-        RandomList<String> suffixes = new RandomList<String> { "cus", "ley", "son", "ton", "bury", "ver", "londe", "mas", "ine", "lette", "bert", "der" };
+        static RandomList<String> prefixes = new RandomList<String> { "Car", "Har", "Lar", "Mar", "Dan", "Max", "Fin", "La", "Hen", "Egg", "Oli", "Stri" };
+        static RandomList<String> suffixes = new RandomList<String> { "cus", "ley", "son", "ton", "bury", "ver", "londe", "mas", "ine", "lette", "bert", "der" };
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Roguelike.Character"/> class if name is given.
